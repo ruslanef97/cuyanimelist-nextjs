@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "CuyAnimeList",
+  title: "RaNimeLIST - Temukan Referensi Anime",
   description: "Website referensi anime paling spektakuler",
 };
 
