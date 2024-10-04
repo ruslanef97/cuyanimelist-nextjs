@@ -3,10 +3,10 @@ import AnimeListHeader from "@/components/AnimeList/Header"
 
 const Page = async () => {
   
-  const apiCallTopAnime = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?rating=rx&sfw=false&limit=8`)
+  const apiCallTopAnime = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?sfw=true&limit=8`)
   const callbackTopAnime = await apiCallTopAnime.json()
 
-  const apiCallNewAnime = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?filter=airing&rating=rx&sfw=false&limit=4`)
+  const apiCallNewAnime = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?filter=airing&sfw=true&limit=4`)
   const callbackNewAnime = await apiCallNewAnime.json()
 
   return (

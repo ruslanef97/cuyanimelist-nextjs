@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
 
 const Page = async ({ params }) => {
   const { keyword } = params
-  const apiCallSearchAnime = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/anime?q=${keyword}`)
+  const apiCallSearchAnime = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/anime?q=${keyword}&sfw=true`)
   const callbackSearchAnime = await apiCallSearchAnime.json()
 
   return (
