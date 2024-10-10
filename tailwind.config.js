@@ -19,7 +19,9 @@ module.exports = {
         accent: '#b434eb',
         secondary: '#393e46',
         dark: '#222831',
-        light: '#FEFEFE'
+        light: '#FEFEFE',
+        sunglow: '#ffbe39',
+        deepShaffron: '#ffa339',
       }
     }
   },

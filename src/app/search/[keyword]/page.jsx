@@ -12,14 +12,15 @@ export async function generateMetadata({ params }) {
 
 const Page = async ({ params }) => {
   const { keyword } = params
-  const apiCallSearchAnime = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/anime?q=${keyword}&sfw=true`)
+  const decodedKeyword = decodeURI(keyword)
+  const apiCallSearchAnime = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/anime?q=${decodedKeyword}&sfw=true`)
   const callbackSearchAnime = await apiCallSearchAnime.json()
 
   return (
     <>
       {/* Search Anime */}
       <section>
-        <AnimeListHeader title={`Hasil pencarian untuk ${keyword}...`}/>
+        <AnimeListHeader title={`Hasil pencarian untuk '${decodedKeyword}'`}/>
         <AnimeList apiData={callbackSearchAnime} />
       </section>
     </>
