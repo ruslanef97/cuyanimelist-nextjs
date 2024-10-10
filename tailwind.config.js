@@ -18,7 +18,8 @@ module.exports = {
         third: '#ffc639',
         accent: '#b434eb',
         secondary: '#393e46',
-        dark: '#222831'
+        dark: '#222831',
+        light: '#FEFEFE'
       }
     }
   },

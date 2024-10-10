@@ -18,7 +18,7 @@ const Page = async () => {
       </section>
 
       {/* Anime Populer */}
-      <section>
+      <section className="mt-10">
         <AnimeListHeader title="Anime Populer" linkHref="/populer" linkTitle="Lihat Semua"/>
         <AnimeList apiData={callbackTopAnime} />
       </section>
